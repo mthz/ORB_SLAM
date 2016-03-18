@@ -60,7 +60,7 @@ int main(int argc, char **argv)
     }
 
     // Load Settings and Check
-    string strSettingsFile = ros::package::getPath("ORB_SLAM")+"/"+argv[2];
+    string strSettingsFile = ros::package::getPath("orb_slam")+"/"+argv[2];
 
     cv::FileStorage fsSettings(strSettingsFile.c_str(), cv::FileStorage::READ);
     if(!fsSettings.isOpened())
@@ -91,7 +91,7 @@ int main(int argc, char **argv)
     // New version to load vocabulary from text file "Data/ORBvoc.txt". 
     // If you have an own .yml vocabulary, use the function
     // saveToTextFile in Thirdparty/DBoW2/DBoW2/TemplatedVocabulary.h
-    string strVocFile = ros::package::getPath("ORB_SLAM")+"/"+argv[1];
+    string strVocFile = ros::package::getPath("orb_slam")+"/"+argv[1];
     cout << endl << "Loading ORB Vocabulary. This could take a while." << endl;
     
     ORB_SLAM::ORBVocabulary Vocabulary;
